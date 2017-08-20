@@ -20,12 +20,13 @@ main, footer, header {
 
 main {
   overflow-y: auto;
-  /*margin-top: 90px;*/
+  margin-top: 90px;
 }
 
 #headerBar {
   background-color: white;
   overflow:hidden;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 1;
