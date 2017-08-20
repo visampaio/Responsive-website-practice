@@ -20,15 +20,15 @@ main, footer, header {
 
 main {
   overflow-y: auto;
-  margin-top: 90px;
+  margin-top: 89px;
 }
 
 #headerBar {
   background-color: white;
   overflow:hidden;
-  position: fixed;
   width: 100%;
   top: 0;
+  position: fixed;
   z-index: 1;
 }
 
@@ -134,12 +134,6 @@ h3:after {
   margin-right: 3%;
 }
 
-.fixed-header {
-  position: fixed;
-  top:0; left:0;
-  width: 100%;
-}
-
 p {margin: 0}
 
 button {
@@ -153,14 +147,6 @@ button {
   color: white;
   font-family: sans-serif;
   font-weight: bold;
-
-}
-
-.fixed {
-  position: fixed;
-  top:0;
-  left:0;
-  width: 100%;
 }
 
 /**** Mobile styles ****/
@@ -173,34 +159,8 @@ button {
     display: block;
   }
 
-/*
-  ul.responsive {
-    position: relative;
-  }
-
-  ul.responsive li {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  ul.responsive .icon {
-    position: absolute;
-    right: 0;
-  }
-*/
-
-  /*#headerBar {
-    position: fixed;
-  }*/
-
   #logo {
       margin-bottom: 12px;
-  }
-
-  #navMobile {
-
-
   }
 
   #navMobile.open {
@@ -237,4 +197,10 @@ button {
     width: 100%;
   }
 
+}
+
+@media screen and (max-width: 354px) {
+  main {
+    margin-top: 160px;
+  }
 }
