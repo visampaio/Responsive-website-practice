@@ -5,47 +5,12 @@
 body {
   background-color: #fafafa;
   margin: 0;
-  padding: 0;
   font-family: sans-serif;
-}
-
-a {
-  text-decoration: none;
 }
 
 main, footer, header {
   width: 80%;
   margin: 0 auto;
-}
-
-main {
-  overflow-y: auto;
-  margin-top: 89px;
-}
-
-#headerBar {
-  background-color: white;
-  overflow:hidden;
-  width: 100%;
-  top: 0;
-  position: fixed;
-  z-index: 1;
-}
-
-#logo {
-  float: left;
-  background-color: #e9ebea;
-  margin: 15px 0 0 0;
-  padding: 5px 10px;
-  width: 235px;
-  font-size: 45px;
-  font-weight: bold;
-  color: #63a7d1;
-  display: inline-block;
-}
-
-nav {
-  float: right;
 }
 
 ul {
@@ -54,10 +19,52 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+p {margin: 0}
+
+/**** Header styles ****/
+
+#headerBar {
+  background-color: white;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+#logo {
+  background-color: #e9ebea;
+  margin: 15px 0 12px 0;
+  padding: 5px 10px;
+  width: 235px;
+  font-size: 45px;
+  font-weight: bold;
+  color: #63a7d1;
+  display: inline-block;
+}
+
+/**** Desktop navigation styles ****/
+
+nav {
+  float: right;
+}
+
 nav li {
   display: inline-block;
-  padding-top: 16%;
+  padding-top: 20%;
   padding-bottom: 20%;
+}
+
+nav li:hover {
+  background-color: #edebec;
+  transition: 0.1s ease;
+}
+
+li.active, li:hover {
+  border-bottom: 5px solid #4ebbe6;
 }
 
 nav a {
@@ -66,25 +73,28 @@ nav a {
   padding: 15px;
 }
 
-nav li:hover {
-  background-color: #edebec;
-  border-bottom: 5px solid #4ebbe6;
-  transition: 0.1s ease;
-  /*padding: 20px 0px;*/
-}
+/**** Mobile navigation while on desktop mode styles ****/
 
-nav li.active {
-  border-bottom: 5px solid #4ebbe6;
+#navMobile {
+  display: none;
 }
 
 .icon {
   display: none;
   margin-top: 1em;
-  font-size: 20px;
+  background-color: #f0f0f0;
 }
 
-#navMobile {
-  display: none;
+.icon a {
+  font-size: 22px;
+  color: #888888;
+}
+
+/**** Main styles ****/
+
+main {
+  overflow-y: auto;
+  margin-top: 89px;
 }
 
 article {
@@ -94,9 +104,7 @@ article {
   padding-right: 2%;
 }
 
-article > header {
-  display: block;
-  text-align: left;
+article header {
   overflow: hidden;
   width: 100%;
 }
@@ -107,15 +115,17 @@ h3 {
   width: 100%;
 }
 
-h3:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-  background: #d7d7d7;
-  margin-left: 2%;
-}
+  /**** Horizontal line style ****/
+
+  h3:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #d7d7d7;
+    margin-left: 2%;
+  }
 
 .box {
   background-color: white;
@@ -134,7 +144,7 @@ h3:after {
   margin-right: 3%;
 }
 
-p {margin: 0}
+/**** Footer styles ****/
 
 button {
   background-color: #75debf;
@@ -142,16 +152,22 @@ button {
   height: 40px;
   margin-top: 3%;
   margin-right: 2%;
-  padding: 0%;
   border: none;
   color: white;
-  font-family: sans-serif;
   font-weight: bold;
 }
 
-/**** Mobile styles ****/
+/**** Mobile mode styles ****/
 
 @media screen and (max-width: 768px) {
+
+  article, button {
+    width: 100%;
+  }
+
+  footer {
+    margin-top: 5%;
+  }
 
   nav ul li {display:none}
 
@@ -159,8 +175,13 @@ button {
     display: block;
   }
 
-  #logo {
-      margin-bottom: 12px;
+  nav li:hover {
+    background-color: #c9e5f1;
+    border: none;
+  }
+
+  nav li a:hover {
+    color: #4ebbe6;
   }
 
   #navMobile.open {
@@ -172,7 +193,6 @@ button {
     z-index: 1;
     /*height: 160px;*/
     border: 1px solid #a0a1a6;
-    overflow: auto;
   }
 
   #navMobile li {
@@ -182,7 +202,6 @@ button {
 
   #navMobile a {
     color: #a3a4a9;
-    padding-bottom: 2%;
   }
 
   #navMobile li.active {
@@ -192,15 +211,12 @@ button {
   #navMobile li.active a {
     color: white;
   }
-
-  article, button {
-    width: 100%;
-  }
-
 }
+
+/**** Fix for mobile menu if screen is really small ****/
 
 @media screen and (max-width: 354px) {
   main {
-    margin-top: 160px;
+    margin-top: 158px;
   }
 }

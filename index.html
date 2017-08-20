@@ -12,109 +12,26 @@
       <figure id="logo">MY LOGO</figure>
       <nav>
         <ul id="menu">
-        <li class="icon"><a href="#" onclick="myFunction()">&#9776;</a></li>
+        <li class="icon"><a onclick="openMenu()">&#9776;</a></li>
         <li class="active"><a href="#">Active</a></li>
         <li><a href="#">About Us</a></li>
       </ul>
       </nav>
-
-    </div>
-    <div id="navMobile">
-            <ul>
-              <li class="active"><a href="#">Active</a></li>
-              <li><a href="#">About Us</a></li>
-            </ul>
-    </div>
     </header>
+  </div>
 
   <main>
     <div id="navMobile">
-            <ul>
-              <li class="active"><a href="#">Active</a></li>
-              <li><a href="#">About Us</a></li>
-            </ul>
+      <ul>
+        <li class="active"><a href="#">Active</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
     </div>
+
     <article>
         <header><h3>Your Profile</h3></header>
         <div class="box">
-          <figure class="picture"> </figure>
-          <p><b>Mr. First Name</b><br><br>
-          214 Address Ave.<br>
-          Toronto, ON <br>
-          M4H 2R6 <br><br>
-          Tel. 416-777-4565</p>
-        </div>
-    </article>
-    <article>
-        <header><h3>Your Profile</h3></header>
-        <div class="box">
-          <figure class="picture"> </figure>
-          <p><b>Mr. First Name</b><br><br>
-          214 Address Ave.<br>
-          Toronto, ON <br>
-          M4H 2R6 <br><br>
-          Tel. 416-777-4565</p>
-        </div>
-    </article>
-    <article>
-        <header><h3>Your Profile</h3></header>
-        <div class="box">
-          <figure class="picture"> </figure>
-          <p><b>Mr. First Name</b><br><br>
-          214 Address Ave.<br>
-          Toronto, ON <br>
-          M4H 2R6 <br><br>
-          Tel. 416-777-4565</p>
-        </div>
-    </article>
-    <article>
-        <header><h3>Your Profile</h3></header>
-        <div class="box">
-          <figure class="picture"> </figure>
-          <p><b>Mr. First Name</b><br><br>
-          214 Address Ave.<br>
-          Toronto, ON <br>
-          M4H 2R6 <br><br>
-          Tel. 416-777-4565</p>
-        </div>
-    </article>
-    <article>
-        <header><h3>Your Profile</h3></header>
-        <div class="box">
-          <figure class="picture"> </figure>
-          <p><b>Mr. First Name</b><br><br>
-          214 Address Ave.<br>
-          Toronto, ON <br>
-          M4H 2R6 <br><br>
-          Tel. 416-777-4565</p>
-        </div>
-    </article>
-    <article>
-        <header><h3>Your Profile</h3></header>
-        <div class="box">
-          <figure class="picture"> </figure>
-          <p><b>Mr. First Name</b><br><br>
-          214 Address Ave.<br>
-          Toronto, ON <br>
-          M4H 2R6 <br><br>
-          Tel. 416-777-4565</p>
-        </div>
-    </article>
-    <article>
-        <header><h3>Your Profile</h3></header>
-        <div class="box">
-          <figure class="picture"> </figure>
-          <p><b>Mr. First Name</b><br><br>
-          214 Address Ave.<br>
-          Toronto, ON <br>
-          M4H 2R6 <br><br>
-          Tel. 416-777-4565</p>
-        </div>
-    </article>
-    <article>
-        <header><h3>Doctor Profile</h3></header>
-        <div class="box">
-          <figure class="picture"> </figure>
+          <figure class="picture"></figure>
           <p><b>Mr. First Name</b><br><br>
           214 Address Ave.<br>
           Toronto, ON <br>
@@ -123,6 +40,17 @@
         </div>
     </article>
 
+    <article>
+        <header><h3>Doctor Profile</h3></header>
+        <div class="box">
+          <figure class="picture"></figure>
+          <p><b>Mr. First Name</b><br><br>
+          214 Address Ave.<br>
+          Toronto, ON <br>
+          M4H 2R6 <br><br>
+          Tel. 416-777-4565</p>
+        </div>
+    </article>
   </main>
 
   <footer>
@@ -132,14 +60,14 @@
   </footer>
 
   <script>
-function myFunction() {
+function openMenu() {
     var menu = document.getElementById("navMobile");
     if (menu.className === "") {
-        menu.className += "open";
+      menu.className += "open";
     } else {
-        menu.className = "";
+      menu.className = "";
     }
-}
-</script>
+  }
+  </script>
 </body>
 </html>
